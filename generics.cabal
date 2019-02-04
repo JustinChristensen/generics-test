@@ -1,0 +1,15 @@
+cabal-version: >=1.10
+name: generics
+version: 0.1.0.0
+license: MIT
+license-file: LICENSE
+author: Justin Christensen
+maintainer: justin@promise.io
+build-type: Simple
+extra-source-files: CHANGELOG.md
+
+executable generics
+  main-is: Main.hs
+  build-depends: base >=4.11 && <4.12
+  other-modules: Foo Bar
+  default-language: Haskell2010

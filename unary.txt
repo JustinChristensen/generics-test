@@ -1,0 +1,27 @@
+==================== Derived instances ====================
+Derived class instances:
+  instance Generic Foo where
+    from x_a38K
+      = M1
+          (case x_a38K of {
+             Foo g1_a38L
+               -> M1 (M1 (K1 g1_a38L)) })
+    to (M1 x_a38M)
+      = case x_a38M of {
+          (M1 (M1 (K1 g1_a38N)))
+            -> Foo g1_a38N }
+
+
+Derived type family instances:
+  type Rep Foo = D1
+                                     ('MetaData "Foo" "Main" "main" 'GHC.Types.False)
+                                     (C1
+                                        ('MetaCons
+                                           "Foo" 'PrefixI 'GHC.Types.True)
+                                        (S1
+                                           ('MetaSel
+                                              ('Just "foo")
+                                              'NoSourceUnpackedness
+                                              'NoSourceStrictness
+                                              'DecidedLazy)
+                                           (Rec0 GHC.Types.Int)))

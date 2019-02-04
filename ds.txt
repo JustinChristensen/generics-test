@@ -1,0 +1,2170 @@
+==================== Desugar (after optimization) ====================
+Result size of Desugar (after optimization)
+  = {terms: 84, types: 153, coercions: 299, joins: 0/0}
+
+-- RHS size: {terms: 8, types: 74, coercions: 146, joins: 0/0}
+$cto_a2BN :: forall x. Rep Bar x -> Bar
+[LclId]
+$cto_a2BN
+  = \ (@ x_a2BQ) (ds_d2OH :: Rep Bar x_a2BQ) ->
+      case ((ds_d2OH
+             `cast` (Sub (Bar.Rep_Bar[0]) <x_a2BQ>_N
+                     :: (Rep Bar x_a2BQ :: *)
+                        ~R# (D1
+                               ('MetaData "Bar" "Bar" "main" 'False)
+                               (C1
+                                  ('MetaCons "Bar" 'PrefixI 'True)
+                                  (S1
+                                     ('MetaSel
+                                        ('Just "bar")
+                                        'NoSourceUnpackedness
+                                        'NoSourceStrictness
+                                        'DecidedLazy)
+                                     (Rec0 Bool)
+                                   :*: S1
+                                         ('MetaSel
+                                            ('Just "foo")
+                                            'NoSourceUnpackedness
+                                            'NoSourceStrictness
+                                            'DecidedLazy)
+                                         (Rec0 String)))
+                               x_a2BQ :: *)))
+            `cast` (GHC.Generics.N:M1[0]
+                        <*>_N
+                        <D>_P
+                        <'MetaData "Bar" "Bar" "main" 'False>_P
+                        <M1
+                           C
+                           ('MetaCons "Bar" 'PrefixI 'True)
+                           (M1
+                              S
+                              ('MetaSel
+                                 ('Just "bar")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R Bool)
+                            :*: M1
+                                  S
+                                  ('MetaSel
+                                     ('Just "foo")
+                                     'NoSourceUnpackedness
+                                     'NoSourceStrictness
+                                     'DecidedLazy)
+                                  (K1 R String))>_R <x_a2BQ>_N
+                    :: (M1
+                          D
+                          ('MetaData "Bar" "Bar" "main" 'False)
+                          (M1
+                             C
+                             ('MetaCons "Bar" 'PrefixI 'True)
+                             (M1
+                                S
+                                ('MetaSel
+                                   ('Just "bar")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (K1 R Bool)
+                              :*: M1
+                                    S
+                                    ('MetaSel
+                                       ('Just "foo")
+                                       'NoSourceUnpackedness
+                                       'NoSourceStrictness
+                                       'DecidedLazy)
+                                    (K1 R String)))
+                          x_a2BQ :: *)
+                       ~R# (M1
+                              C
+                              ('MetaCons "Bar" 'PrefixI 'True)
+                              (M1
+                                 S
+                                 ('MetaSel
+                                    ('Just "bar")
+                                    'NoSourceUnpackedness
+                                    'NoSourceStrictness
+                                    'DecidedLazy)
+                                 (K1 R Bool)
+                               :*: M1
+                                     S
+                                     ('MetaSel
+                                        ('Just "foo")
+                                        'NoSourceUnpackedness
+                                        'NoSourceStrictness
+                                        'DecidedLazy)
+                                     (K1 R String))
+                              x_a2BQ :: *)))
+           `cast` (GHC.Generics.N:M1[0]
+                       <*>_N
+                       <C>_P
+                       <'MetaCons "Bar" 'PrefixI 'True>_P
+                       <M1
+                          S
+                          ('MetaSel
+                             ('Just "bar")
+                             'NoSourceUnpackedness
+                             'NoSourceStrictness
+                             'DecidedLazy)
+                          (K1 R Bool)
+                        :*: M1
+                              S
+                              ('MetaSel
+                                 ('Just "foo")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R String)>_R <x_a2BQ>_N
+                   :: (M1
+                         C
+                         ('MetaCons "Bar" 'PrefixI 'True)
+                         (M1
+                            S
+                            ('MetaSel
+                               ('Just "bar")
+                               'NoSourceUnpackedness
+                               'NoSourceStrictness
+                               'DecidedLazy)
+                            (K1 R Bool)
+                          :*: M1
+                                S
+                                ('MetaSel
+                                   ('Just "foo")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (K1 R String))
+                         x_a2BQ :: *)
+                      ~R# ((:*:)
+                             (M1
+                                S
+                                ('MetaSel
+                                   ('Just "bar")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (K1 R Bool))
+                             (M1
+                                S
+                                ('MetaSel
+                                   ('Just "foo")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (K1 R String))
+                             x_a2BQ :: *))
+      of
+      { :*: ds_d2OK ds_d2OL ->
+      Bar.Bar
+        ((ds_d2OK
+          `cast` (GHC.Generics.N:M1[0]
+                      <*>_N
+                      <S>_P
+                      <'MetaSel
+                         ('Just "bar")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy>_P
+                      <K1 R Bool>_R <x_a2BQ>_N
+                  :: (M1
+                        S
+                        ('MetaSel
+                           ('Just "bar")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (K1 R Bool)
+                        x_a2BQ :: *)
+                     ~R# (K1 R Bool x_a2BQ :: *)))
+         `cast` (GHC.Generics.N:K1[0] <*>_N <R>_P <Bool>_R <x_a2BQ>_P
+                 :: (K1 R Bool x_a2BQ :: *) ~R# (Bool :: *)))
+        ((ds_d2OL
+          `cast` (GHC.Generics.N:M1[0]
+                      <*>_N
+                      <S>_P
+                      <'MetaSel
+                         ('Just "foo")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy>_P
+                      <K1 R String>_R <x_a2BQ>_N
+                  :: (M1
+                        S
+                        ('MetaSel
+                           ('Just "foo")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (K1 R String)
+                        x_a2BQ :: *)
+                     ~R# (K1 R String x_a2BQ :: *)))
+         `cast` (GHC.Generics.N:K1[0] <*>_N <R>_P <String>_R <x_a2BQ>_P
+                 :: (K1 R String x_a2BQ :: *) ~R# (String :: *)))
+      }
+
+-- RHS size: {terms: 8, types: 40, coercions: 153, joins: 0/0}
+$cfrom_a2AP :: forall x. Bar -> Rep Bar x
+[LclId]
+$cfrom_a2AP
+  = \ (@ x_a2AS) (x_a2AI :: Bar) ->
+      ((case x_a2AI of { Bar g1_a2AJ g2_a2AK ->
+        (GHC.Generics.:*:
+           @ *
+           @ (M1
+                S
+                ('MetaSel
+                   ('Just "bar")
+                   'NoSourceUnpackedness
+                   'NoSourceStrictness
+                   'DecidedLazy)
+                (K1 R Bool))
+           @ (M1
+                S
+                ('MetaSel
+                   ('Just "foo")
+                   'NoSourceUnpackedness
+                   'NoSourceStrictness
+                   'DecidedLazy)
+                (K1 R String))
+           @ x_a2AS
+           ((g1_a2AJ
+             `cast` (Sym (GHC.Generics.N:K1[0] <*>_N <R>_P <Bool>_R <x_a2AS>_P)
+                     :: (Bool :: *) ~R# (K1 R Bool x_a2AS :: *)))
+            `cast` (Sym (GHC.Generics.N:M1[0]
+                             <*>_N
+                             <S>_P
+                             <'MetaSel
+                                ('Just "bar")
+                                'NoSourceUnpackedness
+                                'NoSourceStrictness
+                                'DecidedLazy>_P
+                             <K1 R Bool>_R) <x_a2AS>_N
+                    :: (K1 R Bool x_a2AS :: *)
+                       ~R# (M1
+                              S
+                              ('MetaSel
+                                 ('Just "bar")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R Bool)
+                              x_a2AS :: *)))
+           ((g2_a2AK
+             `cast` (Sym (GHC.Generics.N:K1[0]
+                              <*>_N <R>_P <String>_R <x_a2AS>_P)
+                     :: (String :: *) ~R# (K1 R String x_a2AS :: *)))
+            `cast` (Sym (GHC.Generics.N:M1[0]
+                             <*>_N
+                             <S>_P
+                             <'MetaSel
+                                ('Just "foo")
+                                'NoSourceUnpackedness
+                                'NoSourceStrictness
+                                'DecidedLazy>_P
+                             <K1 R String>_R) <x_a2AS>_N
+                    :: (K1 R String x_a2AS :: *)
+                       ~R# (M1
+                              S
+                              ('MetaSel
+                                 ('Just "foo")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R String)
+                              x_a2AS :: *))))
+        `cast` (Sym (GHC.Generics.N:M1[0]
+                         <*>_N
+                         <C>_P
+                         <'MetaCons "Bar" 'PrefixI 'True>_P
+                         <M1
+                            S
+                            ('MetaSel
+                               ('Just "bar")
+                               'NoSourceUnpackedness
+                               'NoSourceStrictness
+                               'DecidedLazy)
+                            (K1 R Bool)
+                          :*: M1
+                                S
+                                ('MetaSel
+                                   ('Just "foo")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (K1 R String)>_R) <x_a2AS>_N
+                :: ((:*:)
+                      (M1
+                         S
+                         ('MetaSel
+                            ('Just "bar")
+                            'NoSourceUnpackedness
+                            'NoSourceStrictness
+                            'DecidedLazy)
+                         (K1 R Bool))
+                      (M1
+                         S
+                         ('MetaSel
+                            ('Just "foo")
+                            'NoSourceUnpackedness
+                            'NoSourceStrictness
+                            'DecidedLazy)
+                         (K1 R String))
+                      x_a2AS :: *)
+                   ~R# (M1
+                          C
+                          ('MetaCons "Bar" 'PrefixI 'True)
+                          (M1
+                             S
+                             ('MetaSel
+                                ('Just "bar")
+                                'NoSourceUnpackedness
+                                'NoSourceStrictness
+                                'DecidedLazy)
+                             (K1 R Bool)
+                           :*: M1
+                                 S
+                                 ('MetaSel
+                                    ('Just "foo")
+                                    'NoSourceUnpackedness
+                                    'NoSourceStrictness
+                                    'DecidedLazy)
+                                 (K1 R String))
+                          x_a2AS :: *))
+        })
+       `cast` (Sym (GHC.Generics.N:M1[0]
+                        <*>_N
+                        <D>_P
+                        <'MetaData "Bar" "Bar" "main" 'False>_P
+                        <M1
+                           C
+                           ('MetaCons "Bar" 'PrefixI 'True)
+                           (M1
+                              S
+                              ('MetaSel
+                                 ('Just "bar")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R Bool)
+                            :*: M1
+                                  S
+                                  ('MetaSel
+                                     ('Just "foo")
+                                     'NoSourceUnpackedness
+                                     'NoSourceStrictness
+                                     'DecidedLazy)
+                                  (K1 R String))>_R) <x_a2AS>_N
+               :: (M1
+                     C
+                     ('MetaCons "Bar" 'PrefixI 'True)
+                     (M1
+                        S
+                        ('MetaSel
+                           ('Just "bar")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (K1 R Bool)
+                      :*: M1
+                            S
+                            ('MetaSel
+                               ('Just "foo")
+                               'NoSourceUnpackedness
+                               'NoSourceStrictness
+                               'DecidedLazy)
+                            (K1 R String))
+                     x_a2AS :: *)
+                  ~R# (M1
+                         D
+                         ('MetaData "Bar" "Bar" "main" 'False)
+                         (M1
+                            C
+                            ('MetaCons "Bar" 'PrefixI 'True)
+                            (M1
+                               S
+                               ('MetaSel
+                                  ('Just "bar")
+                                  'NoSourceUnpackedness
+                                  'NoSourceStrictness
+                                  'DecidedLazy)
+                               (K1 R Bool)
+                             :*: M1
+                                   S
+                                   ('MetaSel
+                                      ('Just "foo")
+                                      'NoSourceUnpackedness
+                                      'NoSourceStrictness
+                                      'DecidedLazy)
+                                   (K1 R String)))
+                         x_a2AS :: *)))
+      `cast` (Sub (Sym (Bar.Rep_Bar[0])) <x_a2AS>_N
+              :: (D1
+                    ('MetaData "Bar" "Bar" "main" 'False)
+                    (C1
+                       ('MetaCons "Bar" 'PrefixI 'True)
+                       (S1
+                          ('MetaSel
+                             ('Just "bar")
+                             'NoSourceUnpackedness
+                             'NoSourceStrictness
+                             'DecidedLazy)
+                          (Rec0 Bool)
+                        :*: S1
+                              ('MetaSel
+                                 ('Just "foo")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (Rec0 String)))
+                    x_a2AS :: *)
+                 ~R# (Rep Bar x_a2AS :: *))
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+Bar.$fGenericBar [InlPrag=NOUSERINLINE CONLIKE] :: Generic Bar
+[LclIdX[DFunId],
+ Unf=DFun: \ ->
+       GHC.Generics.C:Generic TYPE: Bar $cfrom_a2AP $cto_a2BN]
+Bar.$fGenericBar
+  = GHC.Generics.C:Generic @ Bar $cfrom_a2AP $cto_a2BN
+
+-- RHS size: {terms: 5, types: 4, coercions: 0, joins: 0/0}
+foo :: Bar -> String
+[LclIdX[[RecSel]]]
+foo
+  = \ (ds_d2OD :: Bar) ->
+      case ds_d2OD of { Bar _ [Occ=Dead] ds_d2OF -> ds_d2OF }
+
+-- RHS size: {terms: 5, types: 4, coercions: 0, joins: 0/0}
+bar :: Bar -> Bool
+[LclIdX[[RecSel]]]
+bar
+  = \ (ds_d2OA :: Bar) ->
+      case ds_d2OA of { Bar ds_d2OB _ [Occ=Dead] -> ds_d2OB }
+
+-- RHS size: {terms: 5, types: 0, coercions: 0, joins: 0/0}
+Bar.$trModule :: ghc-prim-0.5.2.0:GHC.Types.Module
+[LclIdX]
+Bar.$trModule
+  = ghc-prim-0.5.2.0:GHC.Types.Module
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "main"#)
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "Bar"#)
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a2Oy [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2Oy
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tcChar
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a2Ov [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2Ov
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tcBool
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+$krep_a2Ox [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2Ox
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tc[]
+      (ghc-prim-0.5.2.0:GHC.Types.:
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep
+         $krep_a2Oy
+         (ghc-prim-0.5.2.0:GHC.Types.[]
+            @ ghc-prim-0.5.2.0:GHC.Types.KindRep))
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Bar.$tcBar :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Bar.$tcBar
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      18327683244140985908##
+      13727874504258205728##
+      Bar.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "Bar"#)
+      0#
+      ghc-prim-0.5.2.0:GHC.Types.krep$*
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a2Oz [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2Oz
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      Bar.$tcBar
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a2Ow [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2Ow
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun $krep_a2Ox $krep_a2Oz
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a2Ou [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2Ou
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun $krep_a2Ov $krep_a2Ow
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Bar.$tc'Bar :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Bar.$tc'Bar
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      3006578510555066245##
+      10105297691338911357##
+      Bar.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "'Bar"#)
+      0#
+      $krep_a2Ou
+
+
+
+[2 of 3] Compiling Foo              ( Foo.hs, /Users/wroathe/Development/generics/dist-newstyle/build/x86_64-osx/ghc-8.4.4/generics-0.1.0.0/x/generics/noopt/build/generics/generics-tmp/Foo.o )
+
+==================== Desugar (after optimization) ====================
+Result size of Desugar (after optimization)
+  = {terms: 64, types: 37, coercions: 175, joins: 0/0}
+
+-- RHS size: {terms: 4, types: 4, coercions: 85, joins: 0/0}
+$cto_a2T2 :: forall x. Rep Foo x -> Foo
+[LclId]
+$cto_a2T2
+  = \ (@ x_a2T4) (ds_d2U5 :: Rep Foo x_a2T4) ->
+      Foo.Foo
+        (((((ds_d2U5
+             `cast` (Sub (Foo.Rep_Foo[0]) <x_a2T4>_N
+                     :: (Rep Foo x_a2T4 :: *)
+                        ~R# (D1
+                               ('MetaData "Foo" "Foo" "main" 'False)
+                               (C1
+                                  ('MetaCons "Foo" 'PrefixI 'True)
+                                  (S1
+                                     ('MetaSel
+                                        ('Just "foo")
+                                        'NoSourceUnpackedness
+                                        'NoSourceStrictness
+                                        'DecidedLazy)
+                                     (Rec0 String)))
+                               x_a2T4 :: *)))
+            `cast` (GHC.Generics.N:M1[0]
+                        <*>_N
+                        <D>_P
+                        <'MetaData "Foo" "Foo" "main" 'False>_P
+                        <M1
+                           C
+                           ('MetaCons "Foo" 'PrefixI 'True)
+                           (M1
+                              S
+                              ('MetaSel
+                                 ('Just "foo")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R String))>_R <x_a2T4>_N
+                    :: (M1
+                          D
+                          ('MetaData "Foo" "Foo" "main" 'False)
+                          (M1
+                             C
+                             ('MetaCons "Foo" 'PrefixI 'True)
+                             (M1
+                                S
+                                ('MetaSel
+                                   ('Just "foo")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (K1 R String)))
+                          x_a2T4 :: *)
+                       ~R# (M1
+                              C
+                              ('MetaCons "Foo" 'PrefixI 'True)
+                              (M1
+                                 S
+                                 ('MetaSel
+                                    ('Just "foo")
+                                    'NoSourceUnpackedness
+                                    'NoSourceStrictness
+                                    'DecidedLazy)
+                                 (K1 R String))
+                              x_a2T4 :: *)))
+           `cast` (GHC.Generics.N:M1[0]
+                       <*>_N
+                       <C>_P
+                       <'MetaCons "Foo" 'PrefixI 'True>_P
+                       <M1
+                          S
+                          ('MetaSel
+                             ('Just "foo")
+                             'NoSourceUnpackedness
+                             'NoSourceStrictness
+                             'DecidedLazy)
+                          (K1 R String)>_R <x_a2T4>_N
+                   :: (M1
+                         C
+                         ('MetaCons "Foo" 'PrefixI 'True)
+                         (M1
+                            S
+                            ('MetaSel
+                               ('Just "foo")
+                               'NoSourceUnpackedness
+                               'NoSourceStrictness
+                               'DecidedLazy)
+                            (K1 R String))
+                         x_a2T4 :: *)
+                      ~R# (M1
+                             S
+                             ('MetaSel
+                                ('Just "foo")
+                                'NoSourceUnpackedness
+                                'NoSourceStrictness
+                                'DecidedLazy)
+                             (K1 R String)
+                             x_a2T4 :: *)))
+          `cast` (GHC.Generics.N:M1[0]
+                      <*>_N
+                      <S>_P
+                      <'MetaSel
+                         ('Just "foo")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy>_P
+                      <K1 R String>_R <x_a2T4>_N
+                  :: (M1
+                        S
+                        ('MetaSel
+                           ('Just "foo")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (K1 R String)
+                        x_a2T4 :: *)
+                     ~R# (K1 R String x_a2T4 :: *)))
+         `cast` (GHC.Generics.N:K1[0] <*>_N <R>_P <String>_R <x_a2T4>_P
+                 :: (K1 R String x_a2T4 :: *) ~R# (String :: *)))
+
+-- RHS size: {terms: 6, types: 4, coercions: 90, joins: 0/0}
+$cfrom_a2SA :: forall x. Foo -> Rep Foo x
+[LclId]
+$cfrom_a2SA
+  = \ (@ x_a2SC) (x_a2Sv :: Foo) ->
+      ((case x_a2Sv of { Foo g1_a2Sw ->
+        ((g1_a2Sw
+          `cast` (Sym (GHC.Generics.N:K1[0]
+                           <*>_N <R>_P <String>_R <x_a2SC>_P)
+                  :: (String :: *) ~R# (K1 R String x_a2SC :: *)))
+         `cast` (Sym (GHC.Generics.N:M1[0]
+                          <*>_N
+                          <S>_P
+                          <'MetaSel
+                             ('Just "foo")
+                             'NoSourceUnpackedness
+                             'NoSourceStrictness
+                             'DecidedLazy>_P
+                          <K1 R String>_R) <x_a2SC>_N
+                 :: (K1 R String x_a2SC :: *)
+                    ~R# (M1
+                           S
+                           ('MetaSel
+                              ('Just "foo")
+                              'NoSourceUnpackedness
+                              'NoSourceStrictness
+                              'DecidedLazy)
+                           (K1 R String)
+                           x_a2SC :: *)))
+        `cast` (Sym (GHC.Generics.N:M1[0]
+                         <*>_N
+                         <C>_P
+                         <'MetaCons "Foo" 'PrefixI 'True>_P
+                         <M1
+                            S
+                            ('MetaSel
+                               ('Just "foo")
+                               'NoSourceUnpackedness
+                               'NoSourceStrictness
+                               'DecidedLazy)
+                            (K1 R String)>_R) <x_a2SC>_N
+                :: (M1
+                      S
+                      ('MetaSel
+                         ('Just "foo")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy)
+                      (K1 R String)
+                      x_a2SC :: *)
+                   ~R# (M1
+                          C
+                          ('MetaCons "Foo" 'PrefixI 'True)
+                          (M1
+                             S
+                             ('MetaSel
+                                ('Just "foo")
+                                'NoSourceUnpackedness
+                                'NoSourceStrictness
+                                'DecidedLazy)
+                             (K1 R String))
+                          x_a2SC :: *))
+        })
+       `cast` (Sym (GHC.Generics.N:M1[0]
+                        <*>_N
+                        <D>_P
+                        <'MetaData "Foo" "Foo" "main" 'False>_P
+                        <M1
+                           C
+                           ('MetaCons "Foo" 'PrefixI 'True)
+                           (M1
+                              S
+                              ('MetaSel
+                                 ('Just "foo")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (K1 R String))>_R) <x_a2SC>_N
+               :: (M1
+                     C
+                     ('MetaCons "Foo" 'PrefixI 'True)
+                     (M1
+                        S
+                        ('MetaSel
+                           ('Just "foo")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (K1 R String))
+                     x_a2SC :: *)
+                  ~R# (M1
+                         D
+                         ('MetaData "Foo" "Foo" "main" 'False)
+                         (M1
+                            C
+                            ('MetaCons "Foo" 'PrefixI 'True)
+                            (M1
+                               S
+                               ('MetaSel
+                                  ('Just "foo")
+                                  'NoSourceUnpackedness
+                                  'NoSourceStrictness
+                                  'DecidedLazy)
+                               (K1 R String)))
+                         x_a2SC :: *)))
+      `cast` (Sub (Sym (Foo.Rep_Foo[0])) <x_a2SC>_N
+              :: (D1
+                    ('MetaData "Foo" "Foo" "main" 'False)
+                    (C1
+                       ('MetaCons "Foo" 'PrefixI 'True)
+                       (S1
+                          ('MetaSel
+                             ('Just "foo")
+                             'NoSourceUnpackedness
+                             'NoSourceStrictness
+                             'DecidedLazy)
+                          (Rec0 String)))
+                    x_a2SC :: *)
+                 ~R# (Rep Foo x_a2SC :: *))
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+Foo.$fGenericFoo [InlPrag=NOUSERINLINE CONLIKE] :: Generic Foo
+[LclIdX[DFunId],
+ Unf=DFun: \ ->
+       GHC.Generics.C:Generic TYPE: Foo $cfrom_a2SA $cto_a2T2]
+Foo.$fGenericFoo
+  = GHC.Generics.C:Generic @ Foo $cfrom_a2SA $cto_a2T2
+
+-- RHS size: {terms: 5, types: 3, coercions: 0, joins: 0/0}
+foo :: Foo -> String
+[LclIdX[[RecSel]]]
+foo
+  = \ (ds_d2U2 :: Foo) -> case ds_d2U2 of { Foo ds_d2U3 -> ds_d2U3 }
+
+-- RHS size: {terms: 5, types: 0, coercions: 0, joins: 0/0}
+Foo.$trModule :: ghc-prim-0.5.2.0:GHC.Types.Module
+[LclIdX]
+Foo.$trModule
+  = ghc-prim-0.5.2.0:GHC.Types.Module
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "main"#)
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "Foo"#)
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a2U0 [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2U0
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tcChar
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+$krep_a2TZ [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2TZ
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tc[]
+      (ghc-prim-0.5.2.0:GHC.Types.:
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep
+         $krep_a2U0
+         (ghc-prim-0.5.2.0:GHC.Types.[]
+            @ ghc-prim-0.5.2.0:GHC.Types.KindRep))
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Foo.$tcFoo :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Foo.$tcFoo
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      11236787750777559483##
+      2472662601374496863##
+      Foo.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "Foo"#)
+      0#
+      ghc-prim-0.5.2.0:GHC.Types.krep$*
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a2U1 [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2U1
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      Foo.$tcFoo
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a2TY [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a2TY
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun $krep_a2TZ $krep_a2U1
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Foo.$tc'Foo :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Foo.$tc'Foo
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      10641757595611461765##
+      13961773224584044648##
+      Foo.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "'Foo"#)
+      0#
+      $krep_a2TY
+
+
+
+[3 of 3] Compiling Main             ( Main.hs, /Users/wroathe/Development/generics/dist-newstyle/build/x86_64-osx/ghc-8.4.4/generics-0.1.0.0/x/generics/noopt/build/generics/generics-tmp/Main.o )
+
+==================== Desugar (after optimization) ====================
+Result size of Desugar (after optimization)
+  = {terms: 461, types: 1,431, coercions: 152, joins: 0/28}
+
+-- RHS size: {terms: 9, types: 16, coercions: 0, joins: 0/0}
+$cgetFieldG_a3TX :: forall b p. String -> V1 p -> Maybe b
+[LclId]
+$cgetFieldG_a3TX
+  = \ (@ b_a3TV) (@ p_a3TZ) _ [Occ=Dead] (x_a2Ys :: V1 p_a3TZ) ->
+      case x_a2Ys of { __DEFAULT ->
+      Control.Exception.Base.patError
+        @ 'ghc-prim-0.5.2.0:GHC.Types.LiftedRep
+        @ (Maybe b_a3TV)
+        "Main.hs:26:21-24|case"#
+      }
+
+-- RHS size: {terms: 2, types: 3, coercions: 6, joins: 0/0}
+Main.$fGetFieldGV1b [InlPrag=INLINE (sat-args=0)]
+  :: forall b. GetFieldG V1 b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ b_a3TV) ->
+                 ($cgetFieldG_a3TX @ b_a3TV)
+                 `cast` (Sym (Main.N:GetFieldG[0] <V1>_N <b_a3TV>_N)
+                         :: (forall p. String -> V1 p -> Maybe b_a3TV :: *)
+                            ~R# (GetFieldG V1 b_a3TV :: Constraint))}]
+Main.$fGetFieldGV1b
+  = \ (@ b_a3TV) ->
+      ($cgetFieldG_a3TX @ b_a3TV)
+      `cast` (Sym (Main.N:GetFieldG[0] <V1>_N <b_a3TV>_N)
+              :: (forall p. String -> V1 p -> Maybe b_a3TV :: *)
+                 ~R# (GetFieldG V1 b_a3TV :: Constraint))
+
+-- RHS size: {terms: 8, types: 12, coercions: 0, joins: 0/0}
+$cgetFieldG_a3TN :: forall b p. String -> U1 p -> Maybe b
+[LclId]
+$cgetFieldG_a3TN
+  = \ (@ b_a3TL) (@ p_a3TP) _ [Occ=Dead] _ [Occ=Dead] ->
+      trace
+        @ (Maybe b_a3TL)
+        (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "unit"#)
+        (GHC.Base.Nothing @ b_a3TL)
+
+-- RHS size: {terms: 2, types: 3, coercions: 6, joins: 0/0}
+Main.$fGetFieldGU1b [InlPrag=INLINE (sat-args=0)]
+  :: forall b. GetFieldG U1 b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ b_a3TL) ->
+                 ($cgetFieldG_a3TN @ b_a3TL)
+                 `cast` (Sym (Main.N:GetFieldG[0] <U1>_N <b_a3TL>_N)
+                         :: (forall p. String -> U1 p -> Maybe b_a3TL :: *)
+                            ~R# (GetFieldG U1 b_a3TL :: Constraint))}]
+Main.$fGetFieldGU1b
+  = \ (@ b_a3TL) ->
+      ($cgetFieldG_a3TN @ b_a3TL)
+      `cast` (Sym (Main.N:GetFieldG[0] <U1>_N <b_a3TL>_N)
+              :: (forall p. String -> U1 p -> Maybe b_a3TL :: *)
+                 ~R# (GetFieldG U1 b_a3TL :: Constraint))
+
+-- RHS size: {terms: 26, types: 51, coercions: 0, joins: 0/0}
+$cgetFieldG_a3Ts
+  :: forall (f :: * -> *) b (g :: * -> *).
+     (GetFieldG f b, GetFieldG g b) =>
+     forall p. String -> (:+:) f g p -> Maybe b
+[LclId]
+$cgetFieldG_a3Ts
+  = \ (@ (f_a3Tm :: * -> *))
+      (@ b_a3Tn)
+      (@ (g_a3To :: * -> *))
+      ($dGetFieldG_a3Tp :: GetFieldG f_a3Tm b_a3Tn)
+      ($dGetFieldG_a3Tq :: GetFieldG g_a3To b_a3Tn)
+      (@ p_a3Tu)
+      (s_a2Ym :: String)
+      (ds_d3Xt :: (:+:) f_a3Tm g_a3To p_a3Tu) ->
+      case ds_d3Xt of {
+        L1 x_a2Yn ->
+          trace
+            @ (String -> f_a3Tm p_a3Tu -> Maybe b_a3Tn)
+            (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "l1"#)
+            (getFieldG @ f_a3Tm @ b_a3Tn $dGetFieldG_a3Tp @ p_a3Tu)
+            s_a2Ym
+            x_a2Yn;
+        R1 x_a2Yp ->
+          trace
+            @ (String -> g_a3To p_a3Tu -> Maybe b_a3Tn)
+            (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "r1"#)
+            (getFieldG @ g_a3To @ b_a3Tn $dGetFieldG_a3Tq @ p_a3Tu)
+            s_a2Ym
+            x_a2Yp
+      }
+
+-- RHS size: {terms: 8, types: 19, coercions: 8, joins: 0/0}
+Main.$fGetFieldG:+:b [InlPrag=INLINE (sat-args=0)]
+  :: forall (f :: * -> *) b (g :: * -> *).
+     (GetFieldG f b, GetFieldG g b) =>
+     GetFieldG (f :+: g) b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ (f_a3Tm :: * -> *))
+                 (@ b_a3Tn)
+                 (@ (g_a3To :: * -> *))
+                 ($dGetFieldG_a3Tp [Occ=Once] :: GetFieldG f_a3Tm b_a3Tn)
+                 ($dGetFieldG_a3Tq [Occ=Once] :: GetFieldG g_a3To b_a3Tn) ->
+                 ($cgetFieldG_a3Ts
+                    @ f_a3Tm @ b_a3Tn @ g_a3To $dGetFieldG_a3Tp $dGetFieldG_a3Tq)
+                 `cast` (Sym (Main.N:GetFieldG[0] <f_a3Tm :+: g_a3To>_N <b_a3Tn>_N)
+                         :: (forall p. String -> (:+:) f_a3Tm g_a3To p -> Maybe b_a3Tn :: *)
+                            ~R# (GetFieldG (f_a3Tm :+: g_a3To) b_a3Tn :: Constraint))}]
+Main.$fGetFieldG:+:b
+  = \ (@ (f_a3Tm :: * -> *))
+      (@ b_a3Tn)
+      (@ (g_a3To :: * -> *))
+      ($dGetFieldG_a3Tp :: GetFieldG f_a3Tm b_a3Tn)
+      ($dGetFieldG_a3Tq :: GetFieldG g_a3To b_a3Tn) ->
+      ($cgetFieldG_a3Ts
+         @ f_a3Tm @ b_a3Tn @ g_a3To $dGetFieldG_a3Tp $dGetFieldG_a3Tq)
+      `cast` (Sym (Main.N:GetFieldG[0] <f_a3Tm :+: g_a3To>_N <b_a3Tn>_N)
+              :: (forall p. String -> (:+:) f_a3Tm g_a3To p -> Maybe b_a3Tn :: *)
+                 ~R# (GetFieldG (f_a3Tm :+: g_a3To) b_a3Tn :: Constraint))
+
+-- RHS size: {terms: 27, types: 53, coercions: 0, joins: 0/0}
+$cgetFieldG_a3SS
+  :: forall (f :: * -> *) b (g :: * -> *).
+     (GetFieldG f b, GetFieldG g b) =>
+     forall p. String -> (:*:) f g p -> Maybe b
+[LclId]
+$cgetFieldG_a3SS
+  = \ (@ (f_a3SM :: * -> *))
+      (@ b_a3SN)
+      (@ (g_a3SO :: * -> *))
+      ($dGetFieldG_a3SP :: GetFieldG f_a3SM b_a3SN)
+      ($dGetFieldG_a3SQ :: GetFieldG g_a3SO b_a3SN)
+      (@ p_a3SU)
+      (s_a2Yg :: String)
+      (ds_d3Xo :: (:*:) f_a3SM g_a3SO p_a3SU) ->
+      case ds_d3Xo of { :*: f_a2Yh g_a2Yi ->
+      <|>
+        @ Maybe
+        GHC.Base.$fAlternativeMaybe
+        @ b_a3SN
+        (trace
+           @ (String -> f_a3SM p_a3SU -> Maybe b_a3SN)
+           (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "left"#)
+           (getFieldG @ f_a3SM @ b_a3SN $dGetFieldG_a3SP @ p_a3SU)
+           s_a2Yg
+           f_a2Yh)
+        (trace
+           @ (String -> g_a3SO p_a3SU -> Maybe b_a3SN)
+           (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "right"#)
+           (getFieldG @ g_a3SO @ b_a3SN $dGetFieldG_a3SQ @ p_a3SU)
+           s_a2Yg
+           g_a2Yi)
+      }
+
+-- RHS size: {terms: 8, types: 19, coercions: 8, joins: 0/0}
+Main.$fGetFieldG:*:b [InlPrag=INLINE (sat-args=0)]
+  :: forall (f :: * -> *) b (g :: * -> *).
+     (GetFieldG f b, GetFieldG g b) =>
+     GetFieldG (f :*: g) b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ (f_a3SM :: * -> *))
+                 (@ b_a3SN)
+                 (@ (g_a3SO :: * -> *))
+                 ($dGetFieldG_a3SP [Occ=Once] :: GetFieldG f_a3SM b_a3SN)
+                 ($dGetFieldG_a3SQ [Occ=Once] :: GetFieldG g_a3SO b_a3SN) ->
+                 ($cgetFieldG_a3SS
+                    @ f_a3SM @ b_a3SN @ g_a3SO $dGetFieldG_a3SP $dGetFieldG_a3SQ)
+                 `cast` (Sym (Main.N:GetFieldG[0] <f_a3SM :*: g_a3SO>_N <b_a3SN>_N)
+                         :: (forall p. String -> (:*:) f_a3SM g_a3SO p -> Maybe b_a3SN :: *)
+                            ~R# (GetFieldG (f_a3SM :*: g_a3SO) b_a3SN :: Constraint))}]
+Main.$fGetFieldG:*:b
+  = \ (@ (f_a3SM :: * -> *))
+      (@ b_a3SN)
+      (@ (g_a3SO :: * -> *))
+      ($dGetFieldG_a3SP :: GetFieldG f_a3SM b_a3SN)
+      ($dGetFieldG_a3SQ :: GetFieldG g_a3SO b_a3SN) ->
+      ($cgetFieldG_a3SS
+         @ f_a3SM @ b_a3SN @ g_a3SO $dGetFieldG_a3SP $dGetFieldG_a3SQ)
+      `cast` (Sym (Main.N:GetFieldG[0] <f_a3SM :*: g_a3SO>_N <b_a3SN>_N)
+              :: (forall p. String -> (:*:) f_a3SM g_a3SO p -> Maybe b_a3SN :: *)
+                 ~R# (GetFieldG (f_a3SM :*: g_a3SO) b_a3SN :: Constraint))
+
+-- RHS size: {terms: 10, types: 17, coercions: 0, joins: 0/0}
+$cgetFieldG_a3SE :: forall i c b p. String -> K1 i c p -> Maybe b
+[LclId]
+$cgetFieldG_a3SE
+  = \ (@ i_a3SA)
+      (@ c_a3SB)
+      (@ b_a3SC)
+      (@ p_a3SG)
+      _ [Occ=Dead]
+      _ [Occ=Dead] ->
+      trace
+        @ (Maybe b_a3SC)
+        (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "K1"#)
+        (GHC.Base.Nothing @ b_a3SC)
+
+-- RHS size: {terms: 4, types: 8, coercions: 8, joins: 0/0}
+Main.$fGetFieldGK1b [InlPrag=INLINE (sat-args=0)]
+  :: forall i c b. GetFieldG (K1 i c) b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ i_a3SA) (@ c_a3SB) (@ b_a3SC) ->
+                 ($cgetFieldG_a3SE @ i_a3SA @ c_a3SB @ b_a3SC)
+                 `cast` (Sym (Main.N:GetFieldG[0] <K1 i_a3SA c_a3SB>_N <b_a3SC>_N)
+                         :: (forall p. String -> K1 i_a3SA c_a3SB p -> Maybe b_a3SC :: *)
+                            ~R# (GetFieldG (K1 i_a3SA c_a3SB) b_a3SC :: Constraint))}]
+Main.$fGetFieldGK1b
+  = \ (@ i_a3SA) (@ c_a3SB) (@ b_a3SC) ->
+      ($cgetFieldG_a3SE @ i_a3SA @ c_a3SB @ b_a3SC)
+      `cast` (Sym (Main.N:GetFieldG[0] <K1 i_a3SA c_a3SB>_N <b_a3SC>_N)
+              :: (forall p. String -> K1 i_a3SA c_a3SB p -> Maybe b_a3SC :: *)
+                 ~R# (GetFieldG (K1 i_a3SA c_a3SB) b_a3SC :: Constraint))
+
+-- RHS size: {terms: 15, types: 31, coercions: 7, joins: 0/0}
+$cgetFieldG_a3So
+  :: forall (d :: Meta) (f :: * -> *) b.
+     (Datatype d, GetFieldG f b) =>
+     forall p. String -> D1 d f p -> Maybe b
+[LclId]
+$cgetFieldG_a3So
+  = \ (@ (d_a3Si :: Meta))
+      (@ (f_a3Sj :: * -> *))
+      (@ b_a3Sk)
+      _ [Occ=Dead]
+      ($dGetFieldG_a3Sm :: GetFieldG f_a3Sj b_a3Sk)
+      (@ p_a3Sq)
+      (s_a2Y8 :: String)
+      (ds_d3Xc :: M1 D d_a3Si f_a3Sj p_a3Sq) ->
+      trace
+        @ (String -> f_a3Sj p_a3Sq -> Maybe b_a3Sk)
+        (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "data"#)
+        (getFieldG @ f_a3Sj @ b_a3Sk $dGetFieldG_a3Sm @ p_a3Sq)
+        s_a2Y8
+        (ds_d3Xc
+         `cast` (GHC.Generics.N:M1[0]
+                     <*>_N <D>_P <d_a3Si>_P <f_a3Sj>_R <p_a3Sq>_N
+                 :: (M1 D d_a3Si f_a3Sj p_a3Sq :: *) ~R# (f_a3Sj p_a3Sq :: *)))
+
+-- RHS size: {terms: 8, types: 16, coercions: 8, joins: 0/0}
+Main.$fGetFieldGM1b1 [InlPrag=INLINE (sat-args=0)]
+  :: forall (d :: Meta) (f :: * -> *) b.
+     (Datatype d, GetFieldG f b) =>
+     GetFieldG (D1 d f) b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ (d_a3Si :: Meta))
+                 (@ (f_a3Sj :: * -> *))
+                 (@ b_a3Sk)
+                 ($dDatatype_a3Sl [Occ=Once] :: Datatype d_a3Si)
+                 ($dGetFieldG_a3Sm [Occ=Once] :: GetFieldG f_a3Sj b_a3Sk) ->
+                 ($cgetFieldG_a3So
+                    @ d_a3Si @ f_a3Sj @ b_a3Sk $dDatatype_a3Sl $dGetFieldG_a3Sm)
+                 `cast` (Sym (Main.N:GetFieldG[0] <D1 d_a3Si f_a3Sj>_N <b_a3Sk>_N)
+                         :: (forall p. String -> D1 d_a3Si f_a3Sj p -> Maybe b_a3Sk :: *)
+                            ~R# (GetFieldG (D1 d_a3Si f_a3Sj) b_a3Sk :: Constraint))}]
+Main.$fGetFieldGM1b1
+  = \ (@ (d_a3Si :: Meta))
+      (@ (f_a3Sj :: * -> *))
+      (@ b_a3Sk)
+      ($dDatatype_a3Sl :: Datatype d_a3Si)
+      ($dGetFieldG_a3Sm :: GetFieldG f_a3Sj b_a3Sk) ->
+      ($cgetFieldG_a3So
+         @ d_a3Si @ f_a3Sj @ b_a3Sk $dDatatype_a3Sl $dGetFieldG_a3Sm)
+      `cast` (Sym (Main.N:GetFieldG[0] <D1 d_a3Si f_a3Sj>_N <b_a3Sk>_N)
+              :: (forall p. String -> D1 d_a3Si f_a3Sj p -> Maybe b_a3Sk :: *)
+                 ~R# (GetFieldG (D1 d_a3Si f_a3Sj) b_a3Sk :: Constraint))
+
+-- RHS size: {terms: 15, types: 31, coercions: 7, joins: 0/0}
+$cgetFieldG_a3S6
+  :: forall (c :: Meta) (f :: * -> *) b.
+     (Constructor c, GetFieldG f b) =>
+     forall p. String -> C1 c f p -> Maybe b
+[LclId]
+$cgetFieldG_a3S6
+  = \ (@ (c_a3S0 :: Meta))
+      (@ (f_a3S1 :: * -> *))
+      (@ b_a3S2)
+      _ [Occ=Dead]
+      ($dGetFieldG_a3S4 :: GetFieldG f_a3S1 b_a3S2)
+      (@ p_a3S8)
+      (s_a2Y3 :: String)
+      (ds_d3X8 :: M1 C c_a3S0 f_a3S1 p_a3S8) ->
+      trace
+        @ (String -> f_a3S1 p_a3S8 -> Maybe b_a3S2)
+        (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "constr"#)
+        (getFieldG @ f_a3S1 @ b_a3S2 $dGetFieldG_a3S4 @ p_a3S8)
+        s_a2Y3
+        (ds_d3X8
+         `cast` (GHC.Generics.N:M1[0]
+                     <*>_N <C>_P <c_a3S0>_P <f_a3S1>_R <p_a3S8>_N
+                 :: (M1 C c_a3S0 f_a3S1 p_a3S8 :: *) ~R# (f_a3S1 p_a3S8 :: *)))
+
+-- RHS size: {terms: 8, types: 16, coercions: 8, joins: 0/0}
+Main.$fGetFieldGM1b0 [InlPrag=INLINE (sat-args=0)]
+  :: forall (c :: Meta) (f :: * -> *) b.
+     (Constructor c, GetFieldG f b) =>
+     GetFieldG (C1 c f) b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ (c_a3S0 :: Meta))
+                 (@ (f_a3S1 :: * -> *))
+                 (@ b_a3S2)
+                 ($dConstructor_a3S3 [Occ=Once] :: Constructor c_a3S0)
+                 ($dGetFieldG_a3S4 [Occ=Once] :: GetFieldG f_a3S1 b_a3S2) ->
+                 ($cgetFieldG_a3S6
+                    @ c_a3S0 @ f_a3S1 @ b_a3S2 $dConstructor_a3S3 $dGetFieldG_a3S4)
+                 `cast` (Sym (Main.N:GetFieldG[0] <C1 c_a3S0 f_a3S1>_N <b_a3S2>_N)
+                         :: (forall p. String -> C1 c_a3S0 f_a3S1 p -> Maybe b_a3S2 :: *)
+                            ~R# (GetFieldG (C1 c_a3S0 f_a3S1) b_a3S2 :: Constraint))}]
+Main.$fGetFieldGM1b0
+  = \ (@ (c_a3S0 :: Meta))
+      (@ (f_a3S1 :: * -> *))
+      (@ b_a3S2)
+      ($dConstructor_a3S3 :: Constructor c_a3S0)
+      ($dGetFieldG_a3S4 :: GetFieldG f_a3S1 b_a3S2) ->
+      ($cgetFieldG_a3S6
+         @ c_a3S0 @ f_a3S1 @ b_a3S2 $dConstructor_a3S3 $dGetFieldG_a3S4)
+      `cast` (Sym (Main.N:GetFieldG[0] <C1 c_a3S0 f_a3S1>_N <b_a3S2>_N)
+              :: (forall p. String -> C1 c_a3S0 f_a3S1 p -> Maybe b_a3S2 :: *)
+                 ~R# (GetFieldG (C1 c_a3S0 f_a3S1) b_a3S2 :: Constraint))
+
+-- RHS size: {terms: 16, types: 33, coercions: 7, joins: 0/0}
+$cgetFieldG_a3RL
+  :: forall (s :: Meta) (f :: * -> *) b.
+     (Selector s, GetFieldG f b) =>
+     forall p. String -> S1 s f p -> Maybe b
+[LclId]
+$cgetFieldG_a3RL
+  = \ (@ (s_a3RF :: Meta))
+      (@ (f_a3RG :: * -> *))
+      (@ b_a3RH)
+      _ [Occ=Dead]
+      ($dGetFieldG_a3RJ :: GetFieldG f_a3RG b_a3RH)
+      (@ p_a3RN)
+      (s_a2XY :: String)
+      (ds_d3X4 :: M1 S s_a3RF f_a3RG p_a3RN) ->
+      $ @ 'ghc-prim-0.5.2.0:GHC.Types.LiftedRep
+        @ (Maybe b_a3RH)
+        @ (Maybe b_a3RH)
+        (trace
+           @ (Maybe b_a3RH)
+           (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "general"#))
+        (getFieldG
+           @ f_a3RG
+           @ b_a3RH
+           $dGetFieldG_a3RJ
+           @ p_a3RN
+           s_a2XY
+           (ds_d3X4
+            `cast` (GHC.Generics.N:M1[0]
+                        <*>_N <S>_P <s_a3RF>_P <f_a3RG>_R <p_a3RN>_N
+                    :: (M1 S s_a3RF f_a3RG p_a3RN :: *) ~R# (f_a3RG p_a3RN :: *))))
+
+-- RHS size: {terms: 8, types: 16, coercions: 8, joins: 0/0}
+Main.$fGetFieldGM1b [InlPrag=INLINE (sat-args=0)]
+  :: forall (s :: Meta) (f :: * -> *) b.
+     (Selector s, GetFieldG f b) =>
+     GetFieldG (S1 s f) b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ (s_a3RF :: Meta))
+                 (@ (f_a3RG :: * -> *))
+                 (@ b_a3RH)
+                 ($dSelector_a3RI [Occ=Once] :: Selector s_a3RF)
+                 ($dGetFieldG_a3RJ [Occ=Once] :: GetFieldG f_a3RG b_a3RH) ->
+                 ($cgetFieldG_a3RL
+                    @ s_a3RF @ f_a3RG @ b_a3RH $dSelector_a3RI $dGetFieldG_a3RJ)
+                 `cast` (Sym (Main.N:GetFieldG[0] <S1 s_a3RF f_a3RG>_N <b_a3RH>_N)
+                         :: (forall p. String -> S1 s_a3RF f_a3RG p -> Maybe b_a3RH :: *)
+                            ~R# (GetFieldG (S1 s_a3RF f_a3RG) b_a3RH :: Constraint))}]
+Main.$fGetFieldGM1b
+  = \ (@ (s_a3RF :: Meta))
+      (@ (f_a3RG :: * -> *))
+      (@ b_a3RH)
+      ($dSelector_a3RI :: Selector s_a3RF)
+      ($dGetFieldG_a3RJ :: GetFieldG f_a3RG b_a3RH) ->
+      ($cgetFieldG_a3RL
+         @ s_a3RF @ f_a3RG @ b_a3RH $dSelector_a3RI $dGetFieldG_a3RJ)
+      `cast` (Sym (Main.N:GetFieldG[0] <S1 s_a3RF f_a3RG>_N <b_a3RH>_N)
+              :: (forall p. String -> S1 s_a3RF f_a3RG p -> Maybe b_a3RH :: *)
+                 ~R# (GetFieldG (S1 s_a3RF f_a3RG) b_a3RH :: Constraint))
+
+-- RHS size: {terms: 14, types: 33, coercions: 0, joins: 0/0}
+Main.$dmgetField
+  :: forall a b.
+     (GetField a b, Generic a, GetFieldG (Rep a) b) =>
+     String -> a -> Maybe b
+[LclIdX,
+ Unf=Unf{Src=Compulsory, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= \ (@ a_a2XM)
+                 (@ b_a2XN)
+                 _ [Occ=Dead]
+                 ($dGeneric_a3R7 [Occ=Once] :: Generic a_a2XM)
+                 ($dGetFieldG_a3R8 [Occ=Once] :: GetFieldG (Rep a_a2XM) b_a2XN)
+                 (s_a2XO [Occ=Once] :: String)
+                 (x_a2XP [Occ=Once] :: a_a2XM) ->
+                 $ @ 'ghc-prim-0.5.2.0:GHC.Types.LiftedRep
+                   @ (Rep a_a2XM ghc-prim-0.5.2.0:GHC.Types.Any)
+                   @ (Maybe b_a2XN)
+                   (getFieldG
+                      @ (Rep a_a2XM)
+                      @ b_a2XN
+                      $dGetFieldG_a3R8
+                      @ ghc-prim-0.5.2.0:GHC.Types.Any
+                      s_a2XO)
+                   (from
+                      @ a_a2XM $dGeneric_a3R7 @ ghc-prim-0.5.2.0:GHC.Types.Any x_a2XP)}]
+Main.$dmgetField
+  = \ (@ a_a2XM)
+      (@ b_a2XN)
+      _ [Occ=Dead]
+      ($dGeneric_a3R7 :: Generic a_a2XM)
+      ($dGetFieldG_a3R8 :: GetFieldG (Rep a_a2XM) b_a2XN)
+      (s_a2XO :: String)
+      (x_a2XP :: a_a2XM) ->
+      $ @ 'ghc-prim-0.5.2.0:GHC.Types.LiftedRep
+        @ (Rep a_a2XM ghc-prim-0.5.2.0:GHC.Types.Any)
+        @ (Maybe b_a2XN)
+        (getFieldG
+           @ (Rep a_a2XM)
+           @ b_a2XN
+           $dGetFieldG_a3R8
+           @ ghc-prim-0.5.2.0:GHC.Types.Any
+           s_a2XO)
+        (from
+           @ a_a2XM $dGeneric_a3R7 @ ghc-prim-0.5.2.0:GHC.Types.Any x_a2XP)
+
+Rec {
+-- RHS size: {terms: 2, types: 3, coercions: 4, joins: 0/0}
+Main.$fGetFieldBarb [InlPrag=INLINE (sat-args=0)]
+  :: forall b. GetField B.Bar b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ b_a3Rl) ->
+                 ($cgetField_a3Rn @ b_a3Rl)
+                 `cast` (Sym (Main.N:GetField[0] <B.Bar>_N <b_a3Rl>_N)
+                         :: (String -> B.Bar -> Maybe b_a3Rl :: *)
+                            ~R# (GetField B.Bar b_a3Rl :: Constraint))}]
+Main.$fGetFieldBarb
+  = \ (@ b_a3Rl) ->
+      ($cgetField_a3Rn @ b_a3Rl)
+      `cast` (Sym (Main.N:GetField[0] <B.Bar>_N <b_a3Rl>_N)
+              :: (String -> B.Bar -> Maybe b_a3Rl :: *)
+                 ~R# (GetField B.Bar b_a3Rl :: Constraint))
+
+-- RHS size: {terms: 72, types: 388, coercions: 32, joins: 0/17}
+$cgetField_a3Rn [Occ=LoopBreaker]
+  :: forall b. String -> B.Bar -> Maybe b
+[LclId]
+$cgetField_a3Rn
+  = \ (@ b_a3Rl) ->
+      let {
+        $dKnownSymbol_a3W6 :: GHC.TypeLits.KnownSymbol "foo"
+        [LclId]
+        $dKnownSymbol_a3W6
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "foo"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"foo">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"foo">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "foo" :: Constraint)) } in
+      let {
+        $dSingI_a3W5 :: GHC.Generics.SingI "foo"
+        [LclId]
+        $dSingI_a3W5
+          = GHC.Generics.$fSingISymbola @ "foo" $dKnownSymbol_a3W6 } in
+      let {
+        $dSingI_a3W4 :: GHC.Generics.SingI ('Just "foo")
+        [LclId]
+        $dSingI_a3W4
+          = GHC.Generics.$fSingIMaybeJust
+              @ ghc-prim-0.5.2.0:GHC.Types.Symbol @ "foo" $dSingI_a3W5 } in
+      let {
+        $dSelector_a3W2
+          :: Selector
+               ('MetaSel
+                  ('Just "foo")
+                  'NoSourceUnpackedness
+                  'NoSourceStrictness
+                  'DecidedLazy)
+        [LclId]
+        $dSelector_a3W2
+          = GHC.Generics.$fSelectorMetaMetaSel
+              @ ('Just "foo")
+              @ 'NoSourceUnpackedness
+              @ 'NoSourceStrictness
+              @ 'DecidedLazy
+              $dSingI_a3W4
+              GHC.Generics.$fSingISourceUnpackednessNoSourceUnpackedness
+              GHC.Generics.$fSingISourceStrictnessNoSourceStrictness
+              GHC.Generics.$fSingIDecidedStrictnessDecidedLazy } in
+      let {
+        $dGetFieldG_a3VQ
+          :: GetFieldG
+               (M1
+                  S
+                  ('MetaSel
+                     ('Just "foo")
+                     'NoSourceUnpackedness
+                     'NoSourceStrictness
+                     'DecidedLazy)
+                  (Rec0 String))
+               b_a3Rl
+        [LclId]
+        $dGetFieldG_a3VQ
+          = Main.$fGetFieldGM1b
+              @ ('MetaSel
+                   ('Just "foo")
+                   'NoSourceUnpackedness
+                   'NoSourceStrictness
+                   'DecidedLazy)
+              @ (K1 R String)
+              @ b_a3Rl
+              $dSelector_a3W2
+              (Main.$fGetFieldGK1b @ R @ [Char] @ b_a3Rl) } in
+      let {
+        $dKnownSymbol_a3W1 :: GHC.TypeLits.KnownSymbol "bar"
+        [LclId]
+        $dKnownSymbol_a3W1
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "bar"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"bar">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"bar">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "bar" :: Constraint)) } in
+      let {
+        $dSingI_a3VZ :: GHC.Generics.SingI "bar"
+        [LclId]
+        $dSingI_a3VZ
+          = GHC.Generics.$fSingISymbola @ "bar" $dKnownSymbol_a3W1 } in
+      let {
+        $dSingI_a3VT :: GHC.Generics.SingI ('Just "bar")
+        [LclId]
+        $dSingI_a3VT
+          = GHC.Generics.$fSingIMaybeJust
+              @ ghc-prim-0.5.2.0:GHC.Types.Symbol @ "bar" $dSingI_a3VZ } in
+      let {
+        $dSelector_a3VR
+          :: Selector
+               ('MetaSel
+                  ('Just "bar")
+                  'NoSourceUnpackedness
+                  'NoSourceStrictness
+                  'DecidedLazy)
+        [LclId]
+        $dSelector_a3VR
+          = GHC.Generics.$fSelectorMetaMetaSel
+              @ ('Just "bar")
+              @ 'NoSourceUnpackedness
+              @ 'NoSourceStrictness
+              @ 'DecidedLazy
+              $dSingI_a3VT
+              GHC.Generics.$fSingISourceUnpackednessNoSourceUnpackedness
+              GHC.Generics.$fSingISourceStrictnessNoSourceStrictness
+              GHC.Generics.$fSingIDecidedStrictnessDecidedLazy } in
+      let {
+        $dGetFieldG_a3VP
+          :: GetFieldG
+               (M1
+                  S
+                  ('MetaSel
+                     ('Just "bar")
+                     'NoSourceUnpackedness
+                     'NoSourceStrictness
+                     'DecidedLazy)
+                  (Rec0 Bool))
+               b_a3Rl
+        [LclId]
+        $dGetFieldG_a3VP
+          = Main.$fGetFieldGM1b
+              @ ('MetaSel
+                   ('Just "bar")
+                   'NoSourceUnpackedness
+                   'NoSourceStrictness
+                   'DecidedLazy)
+              @ (K1 R Bool)
+              @ b_a3Rl
+              $dSelector_a3VR
+              (Main.$fGetFieldGK1b @ R @ Bool @ b_a3Rl) } in
+      let {
+        $dGetFieldG_a3VM
+          :: GetFieldG
+               (S1
+                  ('MetaSel
+                     ('Just "bar")
+                     'NoSourceUnpackedness
+                     'NoSourceStrictness
+                     'DecidedLazy)
+                  (Rec0 Bool)
+                :*: S1
+                      ('MetaSel
+                         ('Just "foo")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy)
+                      (Rec0 String))
+               b_a3Rl
+        [LclId]
+        $dGetFieldG_a3VM
+          = Main.$fGetFieldG:*:b
+              @ (M1
+                   S
+                   ('MetaSel
+                      ('Just "bar")
+                      'NoSourceUnpackedness
+                      'NoSourceStrictness
+                      'DecidedLazy)
+                   (Rec0 Bool))
+              @ b_a3Rl
+              @ (M1
+                   S
+                   ('MetaSel
+                      ('Just "foo")
+                      'NoSourceUnpackedness
+                      'NoSourceStrictness
+                      'DecidedLazy)
+                   (Rec0 String))
+              $dGetFieldG_a3VP
+              $dGetFieldG_a3VQ } in
+      let {
+        $dKnownSymbol_a3VE :: GHC.TypeLits.KnownSymbol "main"
+        [LclId]
+        $dKnownSymbol_a3VE
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "main"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"main">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"main">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "main" :: Constraint)) } in
+      let {
+        $dKnownSymbol_a3VC :: GHC.TypeLits.KnownSymbol "Bar"
+        [LclId]
+        $dKnownSymbol_a3VC
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "Bar"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"Bar">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Bar">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "Bar" :: Constraint)) } in
+      let {
+        $dConstructor_a3VL :: Constructor ('MetaCons "Bar" 'PrefixI 'True)
+        [LclId]
+        $dConstructor_a3VL
+          = GHC.Generics.$fConstructorMetaMetaCons
+              @ "Bar"
+              @ 'PrefixI
+              @ 'True
+              $dKnownSymbol_a3VC
+              GHC.Generics.$fSingIFixityIPrefixI
+              GHC.Generics.$fSingIBoolTrue } in
+      let {
+        $dGetFieldG_a3Vs
+          :: GetFieldG
+               (M1
+                  C
+                  ('MetaCons "Bar" 'PrefixI 'True)
+                  (S1
+                     ('MetaSel
+                        ('Just "bar")
+                        'NoSourceUnpackedness
+                        'NoSourceStrictness
+                        'DecidedLazy)
+                     (Rec0 Bool)
+                   :*: S1
+                         ('MetaSel
+                            ('Just "foo")
+                            'NoSourceUnpackedness
+                            'NoSourceStrictness
+                            'DecidedLazy)
+                         (Rec0 String)))
+               b_a3Rl
+        [LclId]
+        $dGetFieldG_a3Vs
+          = Main.$fGetFieldGM1b0
+              @ ('MetaCons "Bar" 'PrefixI 'True)
+              @ (S1
+                   ('MetaSel
+                      ('Just "bar")
+                      'NoSourceUnpackedness
+                      'NoSourceStrictness
+                      'DecidedLazy)
+                   (Rec0 Bool)
+                 :*: S1
+                       ('MetaSel
+                          ('Just "foo")
+                          'NoSourceUnpackedness
+                          'NoSourceStrictness
+                          'DecidedLazy)
+                       (Rec0 String))
+              @ b_a3Rl
+              $dConstructor_a3VL
+              $dGetFieldG_a3VM } in
+      let {
+        $dDatatype_a3Vr :: Datatype ('MetaData "Bar" "Bar" "main" 'False)
+        [LclId]
+        $dDatatype_a3Vr
+          = GHC.Generics.$fDatatypeMetaMetaData
+              @ "Bar"
+              @ "Bar"
+              @ "main"
+              @ 'False
+              $dKnownSymbol_a3VC
+              $dKnownSymbol_a3VC
+              $dKnownSymbol_a3VE
+              GHC.Generics.$fSingIBoolFalse } in
+      let {
+        $dGetFieldG_a3Vq
+          :: GetFieldG
+               (D1
+                  ('MetaData "Bar" "Bar" "main" 'False)
+                  (C1
+                     ('MetaCons "Bar" 'PrefixI 'True)
+                     (S1
+                        ('MetaSel
+                           ('Just "bar")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (Rec0 Bool)
+                      :*: S1
+                            ('MetaSel
+                               ('Just "foo")
+                               'NoSourceUnpackedness
+                               'NoSourceStrictness
+                               'DecidedLazy)
+                            (Rec0 String))))
+               b_a3Rl
+        [LclId]
+        $dGetFieldG_a3Vq
+          = Main.$fGetFieldGM1b1
+              @ ('MetaData "Bar" "Bar" "main" 'False)
+              @ (M1
+                   C
+                   ('MetaCons "Bar" 'PrefixI 'True)
+                   (S1
+                      ('MetaSel
+                         ('Just "bar")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy)
+                      (Rec0 Bool)
+                    :*: S1
+                          ('MetaSel
+                             ('Just "foo")
+                             'NoSourceUnpackedness
+                             'NoSourceStrictness
+                             'DecidedLazy)
+                          (Rec0 String)))
+              @ b_a3Rl
+              $dDatatype_a3Vr
+              $dGetFieldG_a3Vs } in
+      Main.$dmgetField
+        @ B.Bar
+        @ b_a3Rl
+        (Main.$fGetFieldBarb @ b_a3Rl)
+        Bar.$fGenericBar
+        ($dGetFieldG_a3Vq
+         `cast` ((GetFieldG (Sym (Bar.Rep_Bar[0])) <b_a3Rl>_N)_R
+                 :: (GetFieldG
+                       (D1
+                          ('MetaData "Bar" "Bar" "main" 'False)
+                          (C1
+                             ('MetaCons "Bar" 'PrefixI 'True)
+                             (S1
+                                ('MetaSel
+                                   ('Just "bar")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (Rec0 Bool)
+                              :*: S1
+                                    ('MetaSel
+                                       ('Just "foo")
+                                       'NoSourceUnpackedness
+                                       'NoSourceStrictness
+                                       'DecidedLazy)
+                                    (Rec0 String))))
+                       b_a3Rl :: Constraint)
+                    ~R# (GetFieldG (Rep B.Bar) b_a3Rl :: Constraint)))
+end Rec }
+
+Rec {
+-- RHS size: {terms: 2, types: 3, coercions: 4, joins: 0/0}
+Main.$fGetFieldFoob [InlPrag=INLINE (sat-args=0)]
+  :: forall b. GetField F.Foo b
+[LclIdX[DFunId(nt)],
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=False,boring_ok=True)
+         Tmpl= \ (@ b_a3Rv) ->
+                 ($cgetField_a3Rx @ b_a3Rv)
+                 `cast` (Sym (Main.N:GetField[0] <F.Foo>_N <b_a3Rv>_N)
+                         :: (String -> F.Foo -> Maybe b_a3Rv :: *)
+                            ~R# (GetField F.Foo b_a3Rv :: Constraint))}]
+Main.$fGetFieldFoob
+  = \ (@ b_a3Rv) ->
+      ($cgetField_a3Rx @ b_a3Rv)
+      `cast` (Sym (Main.N:GetField[0] <F.Foo>_N <b_a3Rv>_N)
+              :: (String -> F.Foo -> Maybe b_a3Rv :: *)
+                 ~R# (GetField F.Foo b_a3Rv :: Constraint))
+
+-- RHS size: {terms: 49, types: 195, coercions: 25, joins: 0/11}
+$cgetField_a3Rx [Occ=LoopBreaker]
+  :: forall b. String -> F.Foo -> Maybe b
+[LclId]
+$cgetField_a3Rx
+  = \ (@ b_a3Rv) ->
+      let {
+        $dKnownSymbol_a3Wp :: GHC.TypeLits.KnownSymbol "foo"
+        [LclId]
+        $dKnownSymbol_a3Wp
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "foo"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"foo">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"foo">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "foo" :: Constraint)) } in
+      let {
+        $dSingI_a3Wo :: GHC.Generics.SingI "foo"
+        [LclId]
+        $dSingI_a3Wo
+          = GHC.Generics.$fSingISymbola @ "foo" $dKnownSymbol_a3Wp } in
+      let {
+        $dSingI_a3Wk :: GHC.Generics.SingI ('Just "foo")
+        [LclId]
+        $dSingI_a3Wk
+          = GHC.Generics.$fSingIMaybeJust
+              @ ghc-prim-0.5.2.0:GHC.Types.Symbol @ "foo" $dSingI_a3Wo } in
+      let {
+        $dSelector_a3Wi
+          :: Selector
+               ('MetaSel
+                  ('Just "foo")
+                  'NoSourceUnpackedness
+                  'NoSourceStrictness
+                  'DecidedLazy)
+        [LclId]
+        $dSelector_a3Wi
+          = GHC.Generics.$fSelectorMetaMetaSel
+              @ ('Just "foo")
+              @ 'NoSourceUnpackedness
+              @ 'NoSourceStrictness
+              @ 'DecidedLazy
+              $dSingI_a3Wk
+              GHC.Generics.$fSingISourceUnpackednessNoSourceUnpackedness
+              GHC.Generics.$fSingISourceStrictnessNoSourceStrictness
+              GHC.Generics.$fSingIDecidedStrictnessDecidedLazy } in
+      let {
+        $dGetFieldG_a3Wf
+          :: GetFieldG
+               (M1
+                  S
+                  ('MetaSel
+                     ('Just "foo")
+                     'NoSourceUnpackedness
+                     'NoSourceStrictness
+                     'DecidedLazy)
+                  (Rec0 String))
+               b_a3Rv
+        [LclId]
+        $dGetFieldG_a3Wf
+          = Main.$fGetFieldGM1b
+              @ ('MetaSel
+                   ('Just "foo")
+                   'NoSourceUnpackedness
+                   'NoSourceStrictness
+                   'DecidedLazy)
+              @ (K1 R String)
+              @ b_a3Rv
+              $dSelector_a3Wi
+              (Main.$fGetFieldGK1b @ R @ [Char] @ b_a3Rv) } in
+      let {
+        $dKnownSymbol_a3Wc :: GHC.TypeLits.KnownSymbol "main"
+        [LclId]
+        $dKnownSymbol_a3Wc
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "main"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"main">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"main">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "main" :: Constraint)) } in
+      let {
+        $dKnownSymbol_a3Wa :: GHC.TypeLits.KnownSymbol "Foo"
+        [LclId]
+        $dKnownSymbol_a3Wa
+          = (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "Foo"#)
+            `cast` (Sym (GHC.TypeLits.N:SSymbol[0]
+                             <"Foo">_P) ; Sym (GHC.TypeLits.N:KnownSymbol[0]) <"Foo">_N
+                    :: (String :: *)
+                       ~R# (GHC.TypeLits.KnownSymbol "Foo" :: Constraint)) } in
+      let {
+        $dConstructor_a3We :: Constructor ('MetaCons "Foo" 'PrefixI 'True)
+        [LclId]
+        $dConstructor_a3We
+          = GHC.Generics.$fConstructorMetaMetaCons
+              @ "Foo"
+              @ 'PrefixI
+              @ 'True
+              $dKnownSymbol_a3Wa
+              GHC.Generics.$fSingIFixityIPrefixI
+              GHC.Generics.$fSingIBoolTrue } in
+      let {
+        $dGetFieldG_a3W9
+          :: GetFieldG
+               (M1
+                  C
+                  ('MetaCons "Foo" 'PrefixI 'True)
+                  (S1
+                     ('MetaSel
+                        ('Just "foo")
+                        'NoSourceUnpackedness
+                        'NoSourceStrictness
+                        'DecidedLazy)
+                     (Rec0 String)))
+               b_a3Rv
+        [LclId]
+        $dGetFieldG_a3W9
+          = Main.$fGetFieldGM1b0
+              @ ('MetaCons "Foo" 'PrefixI 'True)
+              @ (M1
+                   S
+                   ('MetaSel
+                      ('Just "foo")
+                      'NoSourceUnpackedness
+                      'NoSourceStrictness
+                      'DecidedLazy)
+                   (Rec0 String))
+              @ b_a3Rv
+              $dConstructor_a3We
+              $dGetFieldG_a3Wf } in
+      let {
+        $dDatatype_a3W8 :: Datatype ('MetaData "Foo" "Foo" "main" 'False)
+        [LclId]
+        $dDatatype_a3W8
+          = GHC.Generics.$fDatatypeMetaMetaData
+              @ "Foo"
+              @ "Foo"
+              @ "main"
+              @ 'False
+              $dKnownSymbol_a3Wa
+              $dKnownSymbol_a3Wa
+              $dKnownSymbol_a3Wc
+              GHC.Generics.$fSingIBoolFalse } in
+      let {
+        $dGetFieldG_a3W7
+          :: GetFieldG
+               (D1
+                  ('MetaData "Foo" "Foo" "main" 'False)
+                  (C1
+                     ('MetaCons "Foo" 'PrefixI 'True)
+                     (S1
+                        ('MetaSel
+                           ('Just "foo")
+                           'NoSourceUnpackedness
+                           'NoSourceStrictness
+                           'DecidedLazy)
+                        (Rec0 String))))
+               b_a3Rv
+        [LclId]
+        $dGetFieldG_a3W7
+          = Main.$fGetFieldGM1b1
+              @ ('MetaData "Foo" "Foo" "main" 'False)
+              @ (M1
+                   C
+                   ('MetaCons "Foo" 'PrefixI 'True)
+                   (S1
+                      ('MetaSel
+                         ('Just "foo")
+                         'NoSourceUnpackedness
+                         'NoSourceStrictness
+                         'DecidedLazy)
+                      (Rec0 String)))
+              @ b_a3Rv
+              $dDatatype_a3W8
+              $dGetFieldG_a3W9 } in
+      Main.$dmgetField
+        @ F.Foo
+        @ b_a3Rv
+        (Main.$fGetFieldFoob @ b_a3Rv)
+        Foo.$fGenericFoo
+        ($dGetFieldG_a3W7
+         `cast` ((GetFieldG (Sym (Foo.Rep_Foo[0])) <b_a3Rv>_N)_R
+                 :: (GetFieldG
+                       (D1
+                          ('MetaData "Foo" "Foo" "main" 'False)
+                          (C1
+                             ('MetaCons "Foo" 'PrefixI 'True)
+                             (S1
+                                ('MetaSel
+                                   ('Just "foo")
+                                   'NoSourceUnpackedness
+                                   'NoSourceStrictness
+                                   'DecidedLazy)
+                                (Rec0 String))))
+                       b_a3Rv :: Constraint)
+                    ~R# (GetFieldG (Rep F.Foo) b_a3Rv :: Constraint)))
+end Rec }
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+foo :: F.Foo
+[LclIdX]
+foo
+  = Foo.Foo
+      (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "foo works"#)
+
+-- RHS size: {terms: 4, types: 3, coercions: 3, joins: 0/0}
+foorep
+  :: forall x.
+     D1
+       ('MetaData "Foo" "Foo" "main" 'False)
+       (C1
+          ('MetaCons "Foo" 'PrefixI 'True)
+          (S1
+             ('MetaSel
+                ('Just "foo")
+                'NoSourceUnpackedness
+                'NoSourceStrictness
+                'DecidedLazy)
+             (Rec0 String)))
+       x
+[LclIdX]
+foorep
+  = \ (@ x_a3QZ) ->
+      (from @ F.Foo Foo.$fGenericFoo @ x_a3QZ foo)
+      `cast` (Sub (Foo.Rep_Foo[0]) <x_a3QZ>_N
+              :: (Rep F.Foo x_a3QZ :: *)
+                 ~R# (D1
+                        ('MetaData "Foo" "Foo" "main" 'False)
+                        (C1
+                           ('MetaCons "Foo" 'PrefixI 'True)
+                           (S1
+                              ('MetaSel
+                                 ('Just "foo")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (Rec0 String)))
+                        x_a3QZ :: *))
+
+-- RHS size: {terms: 4, types: 0, coercions: 0, joins: 0/0}
+bar :: B.Bar
+[LclIdX]
+bar
+  = Bar.Bar
+      ghc-prim-0.5.2.0:GHC.Types.True
+      (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "bar works"#)
+
+-- RHS size: {terms: 4, types: 3, coercions: 3, joins: 0/0}
+barrep
+  :: forall x.
+     D1
+       ('MetaData "Bar" "Bar" "main" 'False)
+       (C1
+          ('MetaCons "Bar" 'PrefixI 'True)
+          (S1
+             ('MetaSel
+                ('Just "bar")
+                'NoSourceUnpackedness
+                'NoSourceStrictness
+                'DecidedLazy)
+             (Rec0 Bool)
+           :*: S1
+                 ('MetaSel
+                    ('Just "foo")
+                    'NoSourceUnpackedness
+                    'NoSourceStrictness
+                    'DecidedLazy)
+                 (Rec0 String)))
+       x
+[LclIdX]
+barrep
+  = \ (@ x_a3Cx) ->
+      (from @ B.Bar Bar.$fGenericBar @ x_a3Cx bar)
+      `cast` (Sub (Bar.Rep_Bar[0]) <x_a3Cx>_N
+              :: (Rep B.Bar x_a3Cx :: *)
+                 ~R# (D1
+                        ('MetaData "Bar" "Bar" "main" 'False)
+                        (C1
+                           ('MetaCons "Bar" 'PrefixI 'True)
+                           (S1
+                              ('MetaSel
+                                 ('Just "bar")
+                                 'NoSourceUnpackedness
+                                 'NoSourceStrictness
+                                 'DecidedLazy)
+                              (Rec0 Bool)
+                            :*: S1
+                                  ('MetaSel
+                                     ('Just "foo")
+                                     'NoSourceUnpackedness
+                                     'NoSourceStrictness
+                                     'DecidedLazy)
+                                  (Rec0 String)))
+                        x_a3Cx :: *))
+
+-- RHS size: {terms: 5, types: 0, coercions: 0, joins: 0/0}
+Main.$trModule :: ghc-prim-0.5.2.0:GHC.Types.Module
+[LclIdX]
+Main.$trModule
+  = ghc-prim-0.5.2.0:GHC.Types.Module
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "main"#)
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "Main"#)
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a3Wy [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Wy
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tcChar
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 3, types: 1, coercions: 0, joins: 0/0}
+$krep_a3Wu [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Wu
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tcConstraint
+      (ghc-prim-0.5.2.0:GHC.Types.[]
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep)
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+$krep_a3Wx [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Wx
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      ghc-prim-0.5.2.0:GHC.Types.$tc[]
+      (ghc-prim-0.5.2.0:GHC.Types.:
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep
+         $krep_a3Wy
+         (ghc-prim-0.5.2.0:GHC.Types.[]
+            @ ghc-prim-0.5.2.0:GHC.Types.KindRep))
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3Wt [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Wt
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun
+      ghc-prim-0.5.2.0:GHC.Types.krep$* $krep_a3Wu
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3Ws [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Ws
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun
+      ghc-prim-0.5.2.0:GHC.Types.krep$* $krep_a3Wt
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3WE [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3WE
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun
+      ghc-prim-0.5.2.0:GHC.Types.krep$*Arr* $krep_a3Wt
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3WC [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3WC
+  = ghc-prim-0.5.2.0:GHC.Types.$WKindRepVar
+      (ghc-prim-0.5.2.0:GHC.Types.I# 1#)
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+$krep_a3WB [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3WB
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      GHC.Base.$tcMaybe
+      (ghc-prim-0.5.2.0:GHC.Types.:
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep
+         $krep_a3WC
+         (ghc-prim-0.5.2.0:GHC.Types.[]
+            @ ghc-prim-0.5.2.0:GHC.Types.KindRep))
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3WA [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3WA
+  = ghc-prim-0.5.2.0:GHC.Types.$WKindRepVar
+      (ghc-prim-0.5.2.0:GHC.Types.I# 0#)
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3Wz [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Wz
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun $krep_a3WA $krep_a3WB
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3Ww [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Ww
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun $krep_a3Wx $krep_a3Wz
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Main.$tcGetFieldG :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Main.$tcGetFieldG
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      8961644393758271264##
+      9593895267890655200##
+      Main.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "GetFieldG"#)
+      0#
+      $krep_a3WE
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Main.$tcGetField :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Main.$tcGetField
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      8440973466502807469##
+      11936038562610546411##
+      Main.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "GetField"#)
+      0#
+      $krep_a3Ws
+
+-- RHS size: {terms: 7, types: 3, coercions: 0, joins: 0/0}
+$krep_a3WD [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3WD
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepTyConApp
+      Main.$tcGetField
+      (ghc-prim-0.5.2.0:GHC.Types.:
+         @ ghc-prim-0.5.2.0:GHC.Types.KindRep
+         $krep_a3WA
+         (ghc-prim-0.5.2.0:GHC.Types.:
+            @ ghc-prim-0.5.2.0:GHC.Types.KindRep
+            $krep_a3WC
+            (ghc-prim-0.5.2.0:GHC.Types.[]
+               @ ghc-prim-0.5.2.0:GHC.Types.KindRep)))
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+$krep_a3Wv [InlPrag=NOUSERINLINE[~]]
+  :: ghc-prim-0.5.2.0:GHC.Types.KindRep
+[LclId]
+$krep_a3Wv
+  = ghc-prim-0.5.2.0:GHC.Types.KindRepFun $krep_a3Ww $krep_a3WD
+
+-- RHS size: {terms: 8, types: 0, coercions: 0, joins: 0/0}
+Main.$tc'C:GetField :: ghc-prim-0.5.2.0:GHC.Types.TyCon
+[LclIdX]
+Main.$tc'C:GetField
+  = ghc-prim-0.5.2.0:GHC.Types.TyCon
+      17221851985649095498##
+      17405606656605894186##
+      Main.$trModule
+      (ghc-prim-0.5.2.0:GHC.Types.TrNameS "'C:GetField"#)
+      2#
+      $krep_a3Wv
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+$dShow_a3Vd :: Show [Char]
+[LclId]
+$dShow_a3Vd = GHC.Show.$fShow[] @ Char GHC.Show.$fShowChar
+
+-- RHS size: {terms: 8, types: 8, coercions: 0, joins: 0/0}
+main :: IO ()
+[LclIdX]
+main
+  = print
+      @ (Maybe String)
+      (GHC.Show.$fShowMaybe @ [Char] $dShow_a3Vd)
+      (getField
+         @ B.Bar
+         @ String
+         (Main.$fGetFieldBarb @ [Char])
+         (ghc-prim-0.5.2.0:GHC.CString.unpackCString# "foo"#)
+         bar)
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+:Main.main :: IO ()
+[LclIdX]
+:Main.main = GHC.TopHandler.runMainIO @ () main

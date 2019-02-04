@@ -1,0 +1,62 @@
+==================== Derived instances ====================
+Derived class instances:
+  instance Generic (Tree a) where
+    from x_a2Ci
+      = M1
+          (case x_a2Ci of
+             Leaf g1_a2Cj
+               -> L1
+                    (M1 (M1 (K1 g1_a2Cj)))
+             Node g1_a2Ck g2_a2Cl
+               -> R1
+                    (M1
+                       ((:*:)
+                          (M1 (K1 g1_a2Ck))
+                          (M1 (K1 g2_a2Cl)))))
+    to (M1 x_a2Cm)
+      = case x_a2Cm of
+          (L1 (M1 (M1 (K1 g1_a2Cn))))
+            -> Leaf g1_a2Cn
+          (R1 (M1 ((:*:) (M1 (K1 g1_a2Co))
+                                                                (M1 (K1 g2_a2Cp)))))
+            -> Node g1_a2Co g2_a2Cp
+
+
+Derived type family instances:
+  type Rep (Tree a_a1SI) = D1
+                                               ('MetaData
+                                                  "Tree" "Main" "main" 'GHC.Types.False)
+                                               (C1
+                                                  ('MetaCons
+                                                     "Leaf" 'PrefixI 'GHC.Types.False)
+                                                  (S1
+                                                     ('MetaSel
+                                                        'Nothing
+                                                        'NoSourceUnpackedness
+                                                        'NoSourceStrictness
+                                                        'DecidedLazy)
+                                                     (Rec0 a_a1SI))
+                                                :+: C1
+                                                                   ('MetaCons
+                                                                      "Node"
+                                                                      'PrefixI
+                                                                      'GHC.Types.False)
+                                                                   (S1
+                                                                      ('MetaSel
+                                                                         'Nothing
+                                                                         'NoSourceUnpackedness
+                                                                         'NoSourceStrictness
+                                                                         'DecidedLazy)
+                                                                      (Rec0
+                                                                         (Tree a_a1SI))
+                                                                    :*: S1
+                                                                                       ('MetaSel
+                                                                                          'Nothing
+                                                                                          'NoSourceUnpackedness
+                                                                                          'NoSourceStrictness
+                                                                                          'DecidedLazy)
+                                                                                       (Rec0
+                                                                                          (Tree
+                                                                                             a_a1SI))))
+
+
